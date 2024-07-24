@@ -1,0 +1,30 @@
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  & > div {
+    width: 768px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+@function toRem($size) {
+  @return $size / 16px * 1rem;
+}
+
+/** 공통 변수 **/
+$normal_border: #f1f1f1;
