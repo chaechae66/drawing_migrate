@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.wrap {
+  width: 100dvw;
+  height: 25rem;
+  position: relative;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wrap .title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+  line-height: 2.5rem;
+}
+.wrap .desc {
+  margin-bottom: 1.875rem;
+  line-height: 1.375rem;
+}
+.wrap .login_btn {
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.625rem;
+  color: #fff;
+  font-weight: 500;
+}
+.wrap .slider_dot {
+  position: absolute;
+  bottom: 0.9375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 0.625rem;
+}
+.wrap .slider_dot > div {
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}
+.wrap .banner_img {
+  width: 25rem;
+  height: 18.75rem;
+}/*# sourceMappingURL=Slider.module.css.map */

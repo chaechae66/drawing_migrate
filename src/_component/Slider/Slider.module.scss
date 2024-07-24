@@ -1,0 +1,48 @@
+@use "../../_style/Common";
+
+.wrap {
+  width: 100dvw;
+  height: Common.toRem(400px);
+  position: relative;
+  border-bottom: 1px solid Common.$normal_border;
+
+  .title {
+    font-size: Common.toRem(32px);
+    font-weight: 500;
+    margin-bottom: Common.toRem(10px);
+    line-height: Common.toRem(40px);
+  }
+
+  .desc {
+    margin-bottom: Common.toRem(30px);
+    line-height: Common.toRem(22px);
+  }
+
+  .login_btn {
+    border: none;
+    padding: Common.toRem(10px) Common.toRem(20px);
+    border-radius: Common.toRem(10px);
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .slider_dot {
+    position: absolute;
+    bottom: Common.toRem(15px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: Common.toRem(40px);
+    height: Common.toRem(10px);
+    & > div {
+      background-color: #00000060;
+      width: Common.toRem(10px);
+      height: Common.toRem(10px);
+      border-radius: 50%;
+    }
+  }
+
+  .banner_img {
+    width: Common.toRem(400px);
+    height: Common.toRem(300px);
+  }
+}
