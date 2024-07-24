@@ -1,0 +1,17 @@
+@use "../../_style/Common";
+
+.wrap {
+  @extend .wrap;
+  border: 1px solid Common.$normal_border;
+}
+
+.header {
+  height: Common.toRem(50px);
+  .logo {
+    display: flex;
+    align-items: center;
+    & h2 {
+      margin-left: Common.toRem(5px);
+    }
+  }
+}

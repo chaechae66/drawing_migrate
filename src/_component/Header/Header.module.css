@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.wrap {
+  border: 1px solid #f1f1f1;
+}
+
+.header {
+  height: 3.125rem;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+.header .logo h2 {
+  margin-left: 0.3125rem;
+}/*# sourceMappingURL=Header.module.css.map */

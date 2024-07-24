@@ -1,0 +1,20 @@
+@use "../../_style/Common";
+
+.wrap {
+  position: relative;
+}
+
+.search {
+  width: Common.toRem(120px);
+  height: Common.toRem(30px);
+  border-radius: Common.toRem(15px);
+  border: 1px solid Common.$normal_border;
+  padding-left: Common.toRem(32px);
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  left: Common.toRem(10px);
+  transform: translateY(-50%);
+}
