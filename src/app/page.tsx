@@ -1,3 +1,4 @@
+import Best from "../_component/Best/Best";
 import Slider from "../_component/Slider/Slider";
 
 export default function RootPage() {
@@ -20,6 +21,7 @@ export default function RootPage() {
         img="/slider_img01.jpg"
         bg="#0E356C"
       />
+      <Best />
     </>
   );
 }
