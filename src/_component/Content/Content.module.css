@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.title {
+  font-size: 2rem;
+  margin-top: 3.125rem;
+  margin-bottom: 0.625rem;
+}
+
+.desc {
+  margin-bottom: 1.875rem;
+}
+
+.image_box {
+  -moz-column-count: 3;
+       column-count: 3;
+}
+.image_box .image {
+  display: inline-block;
+  width: 100%;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  border-radius: 0.625rem;
+  margin-bottom: 0.625rem;
+}/*# sourceMappingURL=Content.module.css.map */

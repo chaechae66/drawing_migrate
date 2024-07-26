@@ -1,4 +1,5 @@
 import Best from "../_component/Best/Best";
+import Content from "../_component/Content/Content";
 import Slider from "../_component/Slider/Slider";
 
 export default function RootPage() {
@@ -22,6 +23,7 @@ export default function RootPage() {
         bg="#0E356C"
       />
       <Best />
+      <Content />
     </>
   );
 }

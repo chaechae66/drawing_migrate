@@ -1,0 +1,22 @@
+@use "../../_style/Common.scss";
+
+.title {
+  font-size: Common.toRem(32px);
+  margin-top: Common.toRem(50px);
+  margin-bottom: Common.toRem(10px);
+}
+
+.desc {
+  margin-bottom: Common.toRem(30px);
+}
+
+.image_box {
+  column-count: 3;
+  .image {
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    border-radius: Common.toRem(10px);
+    margin-bottom: Common.toRem(10px);
+  }
+}
