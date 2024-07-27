@@ -2,14 +2,17 @@
 
 .wrap {
   position: relative;
+  min-width: 12ch;
 }
 
 .search {
-  width: Common.toRem(120px);
+  box-sizing: border-box;
+  width: 100%;
   height: Common.toRem(30px);
   border-radius: Common.toRem(15px);
   border: 1px solid Common.$normal_border;
-  padding-left: Common.toRem(32px);
+  padding: Common.toRem(5px);
+  padding-left: Common.toRem(30px);
 }
 
 .search_icon {

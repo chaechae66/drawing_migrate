@@ -30,14 +30,17 @@
 /** 공통 변수 **/
 .wrap {
   position: relative;
+  min-width: 12ch;
 }
 
 .search {
-  width: 7.5rem;
+  box-sizing: border-box;
+  width: 100%;
   height: 1.875rem;
   border-radius: 0.9375rem;
   border: 1px solid #f1f1f1;
-  padding-left: 2rem;
+  padding: 0.3125rem;
+  padding-left: 1.875rem;
 }
 
 .search_icon {

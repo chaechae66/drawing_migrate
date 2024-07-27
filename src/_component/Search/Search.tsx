@@ -1,10 +1,23 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import styles from "./Search.module.css";
+import { ChangeEvent, useState } from "react";
 
 export default function Search() {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.currentTarget.value);
+  };
+
   return (
-    <div className={styles.wrap}>
+    <motion.div
+      className={styles.wrap}
+      initial={{ width: "12ch" }}
+      animate={{ width: `${searchValue.length + 8}ch` }}
+      transition={{ duration: 0.3 }}
+    >
       <Image
         src={"/search.svg"}
         alt="검색아이콘"
@@ -12,7 +25,7 @@ export default function Search() {
         height={15}
         className={styles.search_icon}
       />
-      <input className={styles.search} />
-    </div>
+      <input onChange={handleSearch} className={styles.search} />
+    </motion.div>
   );
 }
