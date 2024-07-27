@@ -1,0 +1,29 @@
+@use "../../_style/Common";
+
+.animate {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider_wrap {
+  height: Common.toRem(400px);
+  position: relative;
+}
+.slider_dot_group {
+  position: relative;
+  .slider_dot {
+    position: absolute;
+    z-index: 10;
+    bottom: Common.toRem(15px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: Common.toRem(40px);
+    height: Common.toRem(10px);
+    & > div {
+      background-color: #00000060;
+      width: Common.toRem(10px);
+      height: Common.toRem(10px);
+      border-radius: 50%;
+    }
+  }
+}

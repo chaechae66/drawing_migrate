@@ -2,6 +2,7 @@
 
 .wrap {
   width: 100dvw;
+  flex-shrink: 0;
   height: Common.toRem(400px);
   position: relative;
   border-bottom: 1px solid Common.$normal_border;
@@ -24,21 +25,6 @@
     border-radius: Common.toRem(10px);
     color: #fff;
     font-weight: 500;
-  }
-
-  .slider_dot {
-    position: absolute;
-    bottom: Common.toRem(15px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: Common.toRem(40px);
-    height: Common.toRem(10px);
-    & > div {
-      background-color: #00000060;
-      width: Common.toRem(10px);
-      height: Common.toRem(10px);
-      border-radius: 50%;
-    }
   }
 
   .banner_img {

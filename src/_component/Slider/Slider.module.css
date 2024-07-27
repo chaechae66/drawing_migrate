@@ -30,6 +30,7 @@
 /** 공통 변수 **/
 .wrap {
   width: 100dvw;
+  flex-shrink: 0;
   height: 25rem;
   position: relative;
   border-bottom: 1px solid #f1f1f1;
@@ -50,20 +51,6 @@
   border-radius: 0.625rem;
   color: #fff;
   font-weight: 500;
-}
-.wrap .slider_dot {
-  position: absolute;
-  bottom: 0.9375rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2.5rem;
-  height: 0.625rem;
-}
-.wrap .slider_dot > div {
-  background-color: rgba(0, 0, 0, 0.3764705882);
-  width: 0.625rem;
-  height: 0.625rem;
-  border-radius: 50%;
 }
 .wrap .banner_img {
   width: 25rem;

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.animate {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider_wrap {
+  height: 25rem;
+  position: relative;
+}
+
+.slider_dot_group {
+  position: relative;
+}
+.slider_dot_group .slider_dot {
+  position: absolute;
+  z-index: 10;
+  bottom: 0.9375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 0.625rem;
+}
+.slider_dot_group .slider_dot > div {
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}/*# sourceMappingURL=SliderShow.module.css.map */

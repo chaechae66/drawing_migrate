@@ -1,3 +1,5 @@
+"use client";
+
 interface Props {
   title: React.ReactNode | string;
   desc: React.ReactNode | string;
@@ -27,11 +29,6 @@ export default function Slider({ title, desc, img, bg }: Props) {
 
           <img src={img} alt="슬라이더 배너" className={styles.banner_img} />
         </div>
-      </div>
-      <div className={`${styles.slider_dot} flex between`}>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
       <div
         style={{
