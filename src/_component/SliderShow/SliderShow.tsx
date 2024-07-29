@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Slider from "../Slider/Slider";
 import styles from "./SliderShow.module.css";
 
+const swipeConfidenceThreshold = 5000;
+
 const variants = {
   enter: (direction: number) => {
     return {
@@ -27,7 +29,6 @@ const variants = {
   },
 };
 
-const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
@@ -72,7 +73,7 @@ export default function SliderShow() {
   const onChangeDot = (e: MouseEvent<HTMLDivElement>) => {
     const nodes = [...e.currentTarget.parentElement!.children];
     const index = nodes.indexOf(e.currentTarget);
-    setPage([index, 0]);
+    paginate(index - page);
   };
 
   return (
