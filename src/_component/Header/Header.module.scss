@@ -14,4 +14,12 @@
       margin-left: Common.toRem(5px);
     }
   }
+  .login {
+    background-color: #000;
+    border: none;
+    margin-left: Common.toRem(5px);
+    padding: Common.toRem(8px) Common.toRem(12px);
+    border-radius: 10px;
+    color: #fff;
+  }
 }

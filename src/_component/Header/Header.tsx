@@ -25,6 +25,7 @@ export default function Header() {
         </div>
         <div className="flex center">
           <Search />
+          <button className={styles.login}>로그인</button>
           <Theme />
         </div>
       </div>
