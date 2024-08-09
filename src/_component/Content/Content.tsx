@@ -1,4 +1,8 @@
+"use client";
+
 import styles from "./Content.module.css";
+
+import { Variants, motion } from "framer-motion";
 
 // 더미데이터
 const dummy = [
@@ -48,6 +52,20 @@ const dummy = [
   },
 ];
 
+const cardVariants: Variants = {
+  offscreen: {
+    y: 50,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 0.8,
+    },
+  },
+};
 export default function Content() {
   return (
     <section className="wrap">
@@ -56,7 +74,16 @@ export default function Content() {
         <p className={styles.desc}>사람들이 공유한 그림들을 구경해보아요</p>
         <div className={styles.image_box}>
           {dummy.map(({ id, img }) => (
-            <img key={id} src={img} alt={img} className={styles.image} />
+            <motion.div
+              key={id}
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={cardVariants}
+              transition={{ duration: 1 }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <img src={img} alt={img} className={styles.image} />
+            </motion.div>
           ))}
         </div>
       </div>
