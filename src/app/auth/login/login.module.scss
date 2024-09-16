@@ -1,0 +1,26 @@
+@use "../../../_style/Common.scss";
+
+.wrap {
+  height: calc(100vh - Common.toRem(150px));
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: Common.toRem(24px);
+  margin-bottom: Common.toRem(20px);
+}
+
+.button {
+  background-color: #fff;
+  border: Common.toRem(1px) solid Common.$normal_border;
+  padding: Common.toRem(10px);
+  border-radius: Common.toRem(10px);
+  display: flex;
+  align-items: center;
+  width: Common.toRem(190px);
+  margin-bottom: Common.toRem(10px);
+  & > img {
+    margin-right: Common.toRem(10px);
+  }
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.wrap {
+  height: calc(100vh - 9.375rem);
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.button {
+  background-color: #fff;
+  border: 0.0625rem solid #f1f1f1;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  width: 11.875rem;
+  margin-bottom: 0.625rem;
+}
+.button > img {
+  margin-right: 0.625rem;
+}/*# sourceMappingURL=login.module.css.map */
