@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import Header from "../_component/Header/Header";
 
 import "../index.css";
+import "../_style/Common.css";
+import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
   title: "Drawing",
@@ -18,7 +20,12 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <div id="root">{children}</div>
+        <div id="root" className={styles.content}>
+          {children}
+        </div>
+        <footer className={`flex center ${styles.footer}`}>
+          copyright&copy; 2024 All rights reserved
+        </footer>
       </body>
     </html>
   );

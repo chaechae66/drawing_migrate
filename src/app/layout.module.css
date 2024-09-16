@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.content {
+  min-height: calc(100vh - 9.375rem);
+}
+
+.footer {
+  width: 100%;
+  margin-top: 1.25rem;
+  height: 5rem;
+  background-color: #f1f1f1;
+}/*# sourceMappingURL=layout.module.css.map */

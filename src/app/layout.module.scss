@@ -1,0 +1,11 @@
+@use "../_style/Common.scss";
+
+.content {
+  min-height: calc(100vh - Common.toRem(150px));
+}
+.footer {
+  width: 100%;
+  margin-top: Common.toRem(20px);
+  height: Common.toRem(80px);
+  background-color: #f1f1f1;
+}
