@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg .popup {
+  position: absolute;
+  width: 25rem;
+  min-height: 6.25rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
+.bg .popup .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+.bg .popup .contentTitle {
+  border: 1px solid #f1f1f1;
+  padding: 0.5rem 0.625rem;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.625rem;
+  width: calc(100% - 1.25rem);
+}
+.bg .popup .imgbox {
+  width: 100%;
+  justify-content: flex-end;
+}
+.bg .popup .button {
+  padding: 8px 10px;
+  border-radius: 0.3125rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-right: 0.5rem;
+}
+.bg .dimmed {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+.bg .content {
+  width: 100%;
+  position: static !important;
+  height: auto !important;
+  max-height: 31.25rem;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.bg .submit {
+  background-color: #000;
+  color: #fff;
+  margin-top: 1.25rem;
+  padding: 0.625rem 0px;
+  border-radius: 0.3125rem;
+}/*# sourceMappingURL=AddDrawing.module.css.map */

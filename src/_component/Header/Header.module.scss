@@ -3,6 +3,10 @@
 .wrap {
   @extend .wrap;
   border: 1px solid Common.$normal_border;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 12;
 }
 
 .header {
