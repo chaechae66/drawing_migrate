@@ -1,5 +1,5 @@
 @use "../_style/Common.scss";
-
+@use "../_style/Theme.scss";
 .content {
   min-height: calc(100vh - Common.toRem(150px));
 }
@@ -8,4 +8,19 @@
   margin-top: Common.toRem(20px);
   height: Common.toRem(80px);
   background-color: #f1f1f1;
+}
+
+@include Theme.themify(Theme.$themes) {
+  header {
+    background-color: Theme.themed("bg");
+    color: Theme.themed("text");
+  }
+  & {
+    background-color: Theme.themed("bg");
+    color: Theme.themed("text");
+  }
+  footer {
+    background-color: Theme.themed("bg");
+    color: Theme.themed("text");
+  }
 }

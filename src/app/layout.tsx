@@ -5,6 +5,7 @@ import Header from "../_component/Header/Header";
 import "../index.css";
 import "../_style/Common.css";
 import styles from "./layout.module.css";
+import DarkModeProvider from "./DarkModeProvider";
 
 export const metadata: Metadata = {
   title: "Drawing",
@@ -19,13 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <div id="root" className={styles.content}>
-          {children}
-        </div>
-        <footer className={`flex center ${styles.footer}`}>
-          copyright&copy; 2024 All rights reserved
-        </footer>
+        <DarkModeProvider>
+          <Header />
+          <div id="root" className={styles.content}>
+            {children}
+          </div>
+          <footer className={`flex center ${styles.footer}`}>
+            copyright&copy; 2024 All rights reserved
+          </footer>
+        </DarkModeProvider>
       </body>
     </html>
   );
