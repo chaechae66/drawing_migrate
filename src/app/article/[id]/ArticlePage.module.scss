@@ -1,0 +1,44 @@
+@use "../../../_style/Common.scss";
+
+.wrap {
+  @extend .wrap;
+  & > div {
+    padding: Common.toRem(20px);
+    width: Common.toRem(500px);
+    .titleBox {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: Common.toRem(10px);
+      .title {
+        font-size: Common.toRem(32px);
+        margin-bottom: Common.toRem(8px);
+      }
+      .btnBox {
+        align-self: flex-end;
+        & button {
+          background-color: #fff;
+          border: Common.toRem(1px) solid #f1f1f1;
+          padding: Common.toRem(5px) Common.toRem(8px);
+          border-radius: Common.toRem(5px);
+          &:nth-child(1) {
+            margin-right: Common.toRem(5px);
+          }
+        }
+      }
+    }
+    .imgbox {
+      width: 100%;
+      margin-bottom: Common.toRem(10px);
+      & > img {
+        height: auto !important;
+        position: static !important;
+      }
+    }
+    .gray {
+      color: #999;
+    }
+    .like {
+      margin-right: Common.toRem(5px);
+    }
+  }
+}

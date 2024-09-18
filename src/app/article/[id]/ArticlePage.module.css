@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/** 공통 클래스 **/
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrap > div {
+  width: 768px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+/** 공통 함수 **/
+/** 공통 변수 **/
+.wrap > div {
+  padding: 1.25rem;
+  width: 31.25rem;
+}
+.wrap > div .titleBox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+.wrap > div .titleBox .title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.wrap > div .titleBox .btnBox {
+  align-self: flex-end;
+}
+.wrap > div .titleBox .btnBox button {
+  background-color: #fff;
+  border: 0.0625rem solid #f1f1f1;
+  padding: 0.3125rem 0.5rem;
+  border-radius: 0.3125rem;
+}
+.wrap > div .titleBox .btnBox button:nth-child(1) {
+  margin-right: 0.3125rem;
+}
+.wrap > div .imgbox {
+  width: 100%;
+  margin-bottom: 0.625rem;
+}
+.wrap > div .imgbox > img {
+  height: auto !important;
+  position: static !important;
+}
+.wrap > div .gray {
+  color: #999;
+}
+.wrap > div .like {
+  margin-right: 0.3125rem;
+}/*# sourceMappingURL=ArticlePage.module.css.map */
