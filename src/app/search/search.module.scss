@@ -1,0 +1,66 @@
+@use "../../_style/Common.scss";
+
+.main {
+  margin-top: Common.toRem(40px);
+  padding-bottom: Common.toRem(10px);
+  border-bottom: 1px solid #f1f1f1;
+  .keyword {
+    font-size: Common.toRem(28px);
+    margin-bottom: Common.toRem(10px);
+  }
+  .inputBox {
+    margin-top: Common.toRem(12px);
+    & button {
+      padding: Common.toRem(10px);
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      margin-right: Common.toRem(8px);
+    }
+  }
+  .select {
+    border: 1px solid #f1f1f1;
+    padding: Common.toRem(5px);
+    border-radius: 8px;
+  }
+}
+
+.section {
+  margin-top: Common.toRem(20px);
+  flex-wrap: wrap;
+  .item {
+    padding: Common.toRem(10px);
+    width: 33.333%;
+    flex-shrink: 0;
+    .itemTitle {
+      font-size: Common.toRem(22px);
+    }
+    .dt {
+      font-size: Common.toRem(14px);
+      color: #ccc;
+    }
+    .auth {
+      align-self: flex-end;
+    }
+    .imgBox {
+      width: auto;
+      aspect-ratio: auto 1 / 1;
+      position: relative;
+      border-radius: 10px;
+      .itemImg {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .iconWrap {
+    justify-content: flex-end;
+    margin-top: Common.toRem(5px);
+    .iconBox {
+      margin-left: Common.toRem(5px);
+      .icon {
+        align-self: center;
+        margin-left: Common.toRem(2px);
+      }
+    }
+  }
+}

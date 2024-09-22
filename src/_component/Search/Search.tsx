@@ -2,13 +2,22 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import styles from "./Search.module.css";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, KeyboardEventHandler, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Search() {
   const [searchValue, setSearchValue] = useState("");
+  const router = useRouter();
 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.currentTarget.value);
+  };
+
+  const activeEnter: KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (e.nativeEvent.isComposing) return;
+    if (e.key === "Enter") {
+      router.push(`/search?keyword=${searchValue}`);
+    }
   };
 
   return (
@@ -25,7 +34,12 @@ export default function Search() {
         height={15}
         className={styles.search_icon}
       />
-      <input onChange={handleSearch} className={styles.search} />
+      <input
+        onKeyDown={activeEnter}
+        onChange={handleSearch}
+        className={styles.search}
+        value={searchValue || ""}
+      />
     </motion.div>
   );
 }

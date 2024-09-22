@@ -27,7 +27,6 @@ export default function AddDrawing({ setIsOpen }: Props) {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    console.log(11);
   };
 
   return (
