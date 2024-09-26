@@ -12,6 +12,7 @@
 
 .image_box {
   column-count: 3;
+  padding-bottom: Common.toRem(20px);
   .image {
     display: inline-block;
     width: 100%;

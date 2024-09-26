@@ -22,7 +22,7 @@ export default function AuthPage() {
                 width={30}
                 height={30}
               />
-              <span>카카오로 로그인하기</span>
+              <span className={`dark-color`}>카카오로 로그인하기</span>
             </button>
             <button className={style.button}>
               <Image
@@ -31,7 +31,7 @@ export default function AuthPage() {
                 width={30}
                 height={30}
               />
-              <span>구글로 로그인하기</span>
+              <span className={`dark-color`}>구글로 로그인하기</span>
             </button>
             {/* <input type="text" placeholder="아이디" />
         <br />

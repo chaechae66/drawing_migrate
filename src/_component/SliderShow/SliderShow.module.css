@@ -28,6 +28,25 @@
 
 /** 공통 함수 **/
 /** 공통 변수 **/
+.dark-theme * {
+  color: #fff;
+}
+.dark-theme div {
+  background-color: #333;
+}
+.dark-theme header {
+  background-color: #333;
+}
+.dark-theme footer {
+  background-color: #444;
+}
+.dark-theme .dark-border {
+  border-bottom: 1px solid #555;
+}
+.dark-theme .dark-dot {
+  background-color: rgba(255, 255, 255, 0.3764705882);
+}
+
 .animate {
   position: relative;
   overflow: hidden;
@@ -50,7 +69,8 @@
   width: 2.5rem;
   height: 0.625rem;
 }
-.slider_dot_group .slider_dot > div {
+
+.dot {
   background-color: rgba(0, 0, 0, 0.3764705882);
   width: 0.625rem;
   height: 0.625rem;

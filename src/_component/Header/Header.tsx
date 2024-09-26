@@ -10,11 +10,13 @@ import Search from "../Search/Search";
 import Theme from "../Theme/Theme";
 import { useEffect, useState } from "react";
 import AddDrawing from "../AddDrawing/AddDrawing";
+import useModeStore from "../../_store/store";
 
 export default function Header() {
   const router = useRouter();
   // const accessToken = localStorage.getItem("accessToken");
   const [isOpen, setIsOpen] = useState(false);
+  const { isDark, setMode } = useModeStore();
 
   useEffect(() => {
     if (isOpen) {
@@ -27,7 +29,7 @@ export default function Header() {
   return (
     <>
       {isOpen && <AddDrawing setIsOpen={setIsOpen} />}
-      <header className={`${styles.wrap} wrap flex center`}>
+      <header className={`${styles.wrap} wrap flex center dark-border`}>
         <div className={`${styles.header} flex center between`}>
           <div
             className={styles.logo}
@@ -35,7 +37,16 @@ export default function Header() {
               router.push("/");
             }}
           >
-            <Image src={"/logo.svg"} alt="메인로고" width={25} height={22} />
+            {isDark ? (
+              <Image src={"/logo.svg"} alt="메인로고" width={25} height={22} />
+            ) : (
+              <Image
+                src={"/dark_logo.svg"}
+                alt="메인로고"
+                width={25}
+                height={22}
+              />
+            )}
             <h2>Drawing</h2>
           </div>
           <div className="flex center">
@@ -45,7 +56,7 @@ export default function Header() {
             onClick={() => {
               router.push("/auth/login");
             }}
-            className={styles.login}
+            className={`${styles.login} dark-button`}
           >
             로그인
           </button>
@@ -54,7 +65,7 @@ export default function Header() {
               onClick={() => {
                 setIsOpen(true);
               }}
-              className={styles.login}
+              className={`${styles.login} dark-button`}
             >
               업로드
             </button>

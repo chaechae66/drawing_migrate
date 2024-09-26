@@ -121,10 +121,10 @@ export default function SliderShow() {
         </div>
       </motion.div>
       <div className={styles.slider_dot_group}>
-        <div className={`${styles.slider_dot} flex between`}>
-          <div onClick={onChangeDot}></div>
-          <div onClick={onChangeDot}></div>
-          <div onClick={onChangeDot}></div>
+        <div className={`slider_dot ${styles.slider_dot} flex between`}>
+          <div onClick={onChangeDot} className={`${styles.dot} dark-dot`}></div>
+          <div onClick={onChangeDot} className={`${styles.dot} dark-dot`}></div>
+          <div onClick={onChangeDot} className={`${styles.dot} dark-dot`}></div>
         </div>
       </div>
     </>

@@ -10,8 +10,6 @@ interface Props {
 export default function DarkModeProvider({ children }: Props) {
   const { isDark, setMode } = useModeStore();
   return (
-    <div className={isDark ? style["light-theme"] : style["dark-theme"]}>
-      {children}
-    </div>
+    <div className={isDark ? "light-theme" : "dark-theme"}>{children}</div>
   );
 }

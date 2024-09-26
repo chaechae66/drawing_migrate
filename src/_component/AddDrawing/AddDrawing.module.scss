@@ -10,37 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  .popup {
-    .title {
-      font-size: Common.toRem(24px);
-      margin-bottom: Common.toRem(10px);
-    }
-    .contentTitle {
-      border: 1px solid #f1f1f1;
-      padding: Common.toRem(8px) Common.toRem(10px);
-      border-radius: Common.toRem(5px);
-      margin-bottom: Common.toRem(10px);
-      width: calc(100% - Common.toRem(20px));
-    }
-    position: absolute;
-    width: Common.toRem(400px);
-    min-height: Common.toRem(100px);
-    height: fit-content;
-    background-color: #fff;
-    border-radius: Common.toRem(20px);
-    padding: Common.toRem(20px);
-    .imgbox {
-      width: 100%;
-      justify-content: flex-end;
-    }
-    .button {
-      padding: 8px 10px;
-      border-radius: Common.toRem(5px);
-      background-color: #fff;
-      border: 1px solid #ccc;
-      margin-right: Common.toRem(8px);
-    }
-  }
   .dimmed {
     width: 100vw;
     height: 100vh;
@@ -62,4 +31,37 @@
     padding: Common.toRem(10px) 0px;
     border-radius: Common.toRem(5px);
   }
+}
+
+.popup {
+  .title {
+    font-size: Common.toRem(24px);
+    margin-bottom: Common.toRem(10px);
+  }
+  .contentTitle {
+    border: 1px solid #f1f1f1;
+    padding: Common.toRem(8px) Common.toRem(10px);
+    border-radius: Common.toRem(5px);
+    margin-bottom: Common.toRem(10px);
+    width: calc(100% - Common.toRem(20px));
+  }
+  position: absolute;
+  width: Common.toRem(400px);
+  min-height: Common.toRem(100px);
+  height: fit-content;
+  background-color: #fff;
+  border-radius: Common.toRem(20px);
+  padding: Common.toRem(20px);
+  .imgbox {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.button {
+  padding: 8px 10px;
+  border-radius: Common.toRem(5px);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-right: Common.toRem(8px);
 }

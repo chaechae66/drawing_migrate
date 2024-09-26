@@ -11,7 +11,7 @@ import styles from "./Slider.module.css";
 
 export default function Slider({ title, desc, img, bg }: Props) {
   return (
-    <div className={styles.wrap}>
+    <div className={`${styles.wrap} slider_wrap dark-border`}>
       <div className={`wrap`}>
         <div className={`flex center between`}>
           <div>

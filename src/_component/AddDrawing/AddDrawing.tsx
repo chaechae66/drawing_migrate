@@ -32,7 +32,7 @@ export default function AddDrawing({ setIsOpen }: Props) {
   return (
     <div className={styles.bg}>
       <form onSubmit={handleSubmit} className={`${styles.popup}`}>
-        <div className={`${styles.imgbox} flex`}>
+        <div className={`${styles.imgbox} flex dark-nonebg`}>
           <Image
             className={`${styles.close}`}
             width={15}
@@ -54,7 +54,7 @@ export default function AddDrawing({ setIsOpen }: Props) {
         </div>
         <div>
           <button
-            className={styles.button}
+            className={`${styles.button} dark-button`}
             type="button"
             onClick={() => {
               inputRef.current?.click();
@@ -82,14 +82,14 @@ export default function AddDrawing({ setIsOpen }: Props) {
                 fill
                 alt="사용자 그림"
               />
-              <button type="submit" className={styles.submit}>
+              <button type="submit" className={`${styles.submit} dark-button`}>
                 업로드
               </button>
             </div>
           )}
         </div>
       </form>
-      <div className={styles.dimmed}></div>
+      <div className={`${styles.dimmed}`}></div>
     </div>
   );
 }

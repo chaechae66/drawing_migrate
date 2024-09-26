@@ -28,39 +28,25 @@
 
 /** 공통 함수 **/
 /** 공통 변수 **/
+.dark-theme * {
+  color: #fff;
+}
+.dark-theme div {
+  background-color: #333;
+}
+.dark-theme header {
+  background-color: #333;
+}
+.dark-theme footer {
+  background-color: #444;
+}
+
 .content {
   min-height: calc(100vh - 9.375rem);
 }
 
 .footer {
   width: 100%;
-  margin-top: 1.25rem;
   height: 5rem;
   background-color: #f1f1f1;
-}
-
-.light-theme header {
-  background-color: #ffffff;
-  color: #333333;
-}
-.light-theme {
-  background-color: #ffffff;
-  color: #333333;
-}
-.light-theme footer {
-  background-color: #ffffff;
-  color: #333333;
-}
-
-.dark-theme header {
-  background-color: #333333;
-  color: #ffffff;
-}
-.dark-theme {
-  background-color: #333333;
-  color: #ffffff;
-}
-.dark-theme footer {
-  background-color: #333333;
-  color: #ffffff;
 }/*# sourceMappingURL=layout.module.css.map */

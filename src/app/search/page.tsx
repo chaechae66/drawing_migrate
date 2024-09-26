@@ -149,7 +149,7 @@ export default function SearchPage() {
                 작성자만
               </button>
             </div>
-            <select className={style.select}>
+            <select className={`${style.select} dark-color`}>
               <option>최신순</option>
               <option>인기순</option>
             </select>

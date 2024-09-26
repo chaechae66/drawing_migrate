@@ -8,17 +8,26 @@ export default function Theme() {
   return (
     <>
       <div
-        className={`${styles.theme} flex center`}
+        className={`${styles.theme} flex center dark-button`}
         onClick={() => {
           setMode();
         }}
       >
-        <Image
-          src={"/dark_theme.svg"}
-          alt="다크모드 아이콘"
-          width={18}
-          height={18}
-        />
+        {isDark ? (
+          <Image
+            src={"/theme.svg"}
+            alt="다크모드 아이콘"
+            width={18}
+            height={18}
+          />
+        ) : (
+          <Image
+            src={"/dark_theme.svg"}
+            alt="다크모드 아이콘"
+            width={18}
+            height={18}
+          />
+        )}
       </div>
     </>
   );

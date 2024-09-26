@@ -32,3 +32,32 @@
 
 /** 공통 변수 **/
 $normal_border: #f1f1f1;
+
+.dark-theme {
+  & * {
+    color: #fff;
+  }
+  div,
+  header,
+  main,
+  form {
+    background-color: #333;
+  }
+  footer {
+    background-color: #444;
+  }
+  .dark-border {
+    border-bottom: 1px solid #555;
+  }
+  .dark-dot {
+    background-color: #ffffff60;
+  }
+  .dark-button {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: 600;
+  }
+  .dark-color {
+    color: #333;
+  }
+}

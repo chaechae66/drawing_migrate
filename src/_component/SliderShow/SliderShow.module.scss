@@ -19,11 +19,12 @@
     transform: translateX(-50%);
     width: Common.toRem(40px);
     height: Common.toRem(10px);
-    & > div {
-      background-color: #00000060;
-      width: Common.toRem(10px);
-      height: Common.toRem(10px);
-      border-radius: 50%;
-    }
   }
+}
+
+.dot {
+  background-color: #00000060;
+  width: Common.toRem(10px);
+  height: Common.toRem(10px);
+  border-radius: 50%;
 }
