@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from "./Theme.module.css";
+import styles from "./Theme.module.scss";
 import useModeStore from "../../_store/store";
 
 export default function Theme() {

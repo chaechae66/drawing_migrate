@@ -4,7 +4,7 @@ import { MouseEvent, useState } from "react";
 import { motion } from "framer-motion";
 
 import Slider from "../Slider/Slider";
-import styles from "./SliderShow.module.css";
+import styles from "./SliderShow.module.scss";
 
 const swipeConfidenceThreshold = 5000;
 

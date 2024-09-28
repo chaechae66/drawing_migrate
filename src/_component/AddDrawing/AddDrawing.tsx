@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./AddDrawing.module.css";
+import styles from "./AddDrawing.module.scss";
 import { ChangeEventHandler, FormEventHandler, useRef, useState } from "react";
 
 interface Props {

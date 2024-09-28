@@ -7,7 +7,7 @@ interface Props {
   bg: string;
 }
 
-import styles from "./Slider.module.css";
+import styles from "./Slider.module.scss";
 
 export default function Slider({ title, desc, img, bg }: Props) {
   return (

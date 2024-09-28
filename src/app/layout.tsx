@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Header from "../_component/Header/Header";
 
 import "../index.css";
-import "../_style/Common.css";
-import styles from "./layout.module.css";
+import "../_style/Common.scss";
+import styles from "./layout.module.scss";
 import DarkModeProvider from "./DarkModeProvider";
 
 export const metadata: Metadata = {

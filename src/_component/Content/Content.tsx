@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Content.module.css";
+import styles from "./Content.module.scss";
 
 import { Variants, motion } from "framer-motion";
 

@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import "../../_style/Common.css";
-import styles from "./Header.module.css";
+import "../../_style/Common.scss";
+import styles from "./Header.module.scss";
 
 import Search from "../Search/Search";
 import Theme from "../Theme/Theme";

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FormEventHandler } from "react";
 
-import style from "./login.module.css";
+import style from "./login.module.scss";
 
 export default function AuthPage() {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {

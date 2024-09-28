@@ -64,7 +64,7 @@ const dummy = [
 
 import { useSearchParams } from "next/navigation";
 
-import style from "./search.module.css";
+import style from "./search.module.scss";
 import Image from "next/image";
 import { useState } from "react";
 

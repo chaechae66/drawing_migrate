@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import "../../_style/Common.css";
-import styles from "./Best.module.css";
+import "../../_style/Common.scss";
+import styles from "./Best.module.scss";
 
 import { PanInfo, motion, useAnimation } from "framer-motion";
 
@@ -112,10 +112,10 @@ export default function Best() {
                 <div className={styles.wrapper}>
                   <div className={`${styles.bg} flex column between`}>
                     <h4 className={styles.item_title}>{label}</h4>
-                    <div className="flex between">
+                    <div className="flex between dark-nobg">
                       <span>{rank}님</span>
-                      <div className="flex">
-                        <div className={styles.info}>
+                      <div className="flex dark-nobg">
+                        <div className={`${styles.info} dark-nobg`}>
                           <img
                             className={styles.icon}
                             src="/view.svg"
@@ -123,7 +123,7 @@ export default function Best() {
                           />
                           <span>{views}</span>
                         </div>
-                        <div className={styles.info}>
+                        <div className={`${styles.info} dark-nobg`}>
                           <img
                             className={styles.icon}
                             src="/like.svg"

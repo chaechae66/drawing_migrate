@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import styles from "./Search.module.css";
+import styles from "./Search.module.scss";
 import { ChangeEvent, KeyboardEventHandler, useState } from "react";
 import { useRouter } from "next/navigation";
 

@@ -8,7 +8,7 @@ const dummy = {
 };
 
 import Image from "next/image";
-import styles from "./ArticlePage.module.css";
+import styles from "./ArticlePage.module.scss";
 
 export default function ArticlePage() {
   return (
