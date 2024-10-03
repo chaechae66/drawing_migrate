@@ -63,13 +63,16 @@
     box-sizing: border-box;
     .item_title {
       font-size: Common.toRem(24px);
+      & > div {
+        margin-top: Common.toRem(5px);
+        font-size: Common.toRem(18px);
+      }
     }
     .info {
       display: flex;
       align-items: center;
-      &:first-child {
-        margin-right: Common.toRem(5px);
-      }
+      margin-right: Common.toRem(5px);
+
       .icon {
         margin-right: Common.toRem(5px);
       }
