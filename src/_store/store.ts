@@ -6,7 +6,7 @@ interface Mode {
 }
 
 const useModeStore = create<Mode>((set) => ({
-  isDark: false,
+  isDark: true,
   setMode: () => {
     set((state) => ({ ...state, isDark: !state.isDark }));
   },

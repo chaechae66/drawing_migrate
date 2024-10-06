@@ -1,7 +1,7 @@
 @use "../_style/Common.scss";
 
 .content {
-  min-height: calc(100vh - Common.toRem(150px));
+  min-height: calc(100vh - Common.toRem(130px));
 }
 .footer {
   width: 100%;
