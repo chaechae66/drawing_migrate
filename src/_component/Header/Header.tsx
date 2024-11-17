@@ -28,7 +28,14 @@ export default function Header() {
 
   return (
     <>
-      {isOpen && <AddDrawing setIsOpen={setIsOpen} />}
+      {isOpen && (
+        <AddDrawing
+          setIsOpen={setIsOpen}
+          addTitle={"그림 업로드"}
+          id={null}
+          data={null}
+        />
+      )}
       <header className={`${styles.wrap} wrap flex center dark-border`}>
         <div className={`${styles.header} flex center between`}>
           <div

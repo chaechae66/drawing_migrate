@@ -1,15 +1,37 @@
 import Image from "next/image";
+import {
+  ChangeEventHandler,
+  FormEventHandler,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import axios from "axios";
+import { useQueryClient } from "@tanstack/react-query";
+
 import styles from "./AddDrawing.module.scss";
-import { ChangeEventHandler, FormEventHandler, useRef, useState } from "react";
+import { TDraws } from "../../_type/data";
+import action from "../../_actions/action";
 
 interface Props {
   setIsOpen: (x: boolean) => void;
+  addTitle: string;
+  id: null | number;
+  data: null | TDraws;
 }
 
-export default function AddDrawing({ setIsOpen }: Props) {
+export default function AddDrawing({ setIsOpen, addTitle, id, data }: Props) {
   const [imgFile, setImgFile] = useState<File | null>(null);
   const [prevImg, setPrevImg] = useState<string | null>(null);
+  const [title, setTitle] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    if (data) {
+      setTitle(data.title);
+    }
+  }, [data]);
 
   const onLoadFile: ChangeEventHandler<HTMLInputElement> = (e) => {
     e.preventDefault();
@@ -27,6 +49,39 @@ export default function AddDrawing({ setIsOpen }: Props) {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
+    if (!imgFile) {
+      alert("이미지를 넣어주세요");
+      return;
+    }
+    if (!title) {
+      alert("제목을 입력해주세요");
+      return;
+    }
+
+    const formdata = new FormData();
+    formdata.append("file", imgFile);
+    formdata.append("title", title);
+    id && formdata.append("seq", String(id));
+
+    axios
+      .post("/update", formdata, {
+        headers: {
+          "Content-Type": `multipart/form-data`,
+        },
+      })
+      .then(() => {
+        !id
+          ? queryClient.invalidateQueries({
+              queryKey: ["draws"],
+            })
+          : action(`${process.env.NEXT_PUBLIC_BASE_URL}/draws/${id}`, id);
+      })
+      .finally(() => {
+        alert("성공적으로 업로드 되었습니다.");
+        setTitle("");
+        setImgFile(null);
+        setPrevImg(null);
+      });
   };
 
   return (
@@ -44,11 +99,15 @@ export default function AddDrawing({ setIsOpen }: Props) {
             }}
           />
         </div>
-        <h3 className={styles.title}>그림 업로드</h3>
+        <h3 className={styles.title}>{addTitle}</h3>
         <div>
           <input
             className={styles.contentTitle}
             placeholder="제목"
+            onChange={(e) => {
+              setTitle(e.currentTarget.value);
+            }}
+            value={title}
             type="text"
           />
         </div>
@@ -74,6 +133,15 @@ export default function AddDrawing({ setIsOpen }: Props) {
           accept=".jpg,.jpeg,.png"
         />
         <div>
+          <div className={styles.imgbox}>
+            {!prevImg && data?.file && (
+              <Image
+                src={`data:image/${data.type};base64,${data.file}`}
+                fill
+                alt={data.title}
+              />
+            )}
+          </div>
           {prevImg && (
             <div className="flex column">
               <Image

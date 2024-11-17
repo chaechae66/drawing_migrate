@@ -1,7 +1,6 @@
 "use client";
 
 import useModeStore from "../_store/store";
-import style from "./layout.module.css";
 
 interface Props {
   children: React.ReactNode;
